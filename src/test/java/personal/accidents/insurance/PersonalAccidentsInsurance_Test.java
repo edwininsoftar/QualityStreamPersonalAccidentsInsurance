@@ -5,6 +5,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 
+import base.BasicData;
+
 public class PersonalAccidentsInsurance_Test {
 	
 	private WebDriver driver;
@@ -24,7 +26,9 @@ public class PersonalAccidentsInsurance_Test {
 
 	@Test
 	public void test() {
-		
+		personalAccidentsInsurancePage.quote();
+		personalAccidentsInsurancePage.sure(BasicData.PROTECT, BasicData.BUTTON_BASIC, BasicData.RENT_DAY_SI, BasicData.FRACTURES_SI);
+		personalAccidentsInsurancePage.data(BasicData.TYPE_DOCUMENT_CC, BasicData.DOCUMENT, BasicData.NAME, BasicData.LAST_NAME, BasicData.GENDER_M);
 	}
 
 }
